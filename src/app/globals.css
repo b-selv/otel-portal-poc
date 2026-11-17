@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #172033; background: #f5f7fb; }
+main { max-width: 1000px; margin: 36px auto; padding: 0 20px 60px; }
+h1 { margin-bottom: 8px; }
+.subtle { color: #586174; }
+.panel { background: white; border: 1px solid #dce2ec; border-radius: 12px; padding: 20px; margin: 18px 0; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+input, textarea, select { width: 100%; padding: 10px; border: 1px solid #b8c2d3; border-radius: 7px; margin: 6px 0 14px; font: inherit; }
+label { display: block; font-weight: 600; }
+button { border: 0; border-radius: 7px; padding: 10px 15px; background: #165dba; color: white; cursor: pointer; font: inherit; }
+button.secondary { background: #e7edf7; color: #172033; }
+button:disabled { opacity: .55; cursor: wait; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #e5e9f0; }
+.error { color: #a61b1b; white-space: pre-wrap; }
+.success { color: #167344; }

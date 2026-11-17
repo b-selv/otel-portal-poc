@@ -1,0 +1,33 @@
+AWS Services Configured
+
+Compute
+- ECS Fargate — cluster intrepid-flamingo-0g6uqz, service api-portal-service-serverless, task definition api-developer-portal (revision 3)
+
+Container Registry
+- ECR — repository api-developer-portal with image 0.1.0
+
+Networking
+- ALB — api-portal-elkserverless (internet-facing, HTTP port 80 + HTTPS port 443)
+- Target Group — bharani-test-api-portal (port 3000)
+- Security Group — sg-0ebba684adfcd9778 (ALB, port 80 + 443)
+- NACL — existing NACL with port 443 rule added for your IP
+
+Authentication
+- Cognito User Pool — ap-southeast-1_LcvBpNRCQ with Hosted UI and test user
+
+Database
+- DynamoDB — table ApiPortalConfigurationElkServerless
+
+Security / Certificates
+- ACM — self-signed certificate bharani-serverless-portal
+
+IAM
+- Task Execution Role — ecsTaskExecutionRole
+- Task Role — apiPortalServerlessTaskRole (DynamoDB access)
+
+Observability
+- CloudWatch Log Group — /ecs/api-portal-serverless
+- Elastic Cloud — traces shipping to apexstackops0-obs-bb0aed
+
+Unused (created but not needed)
+- CloudFront — distribution d3peyj0jtsit16.cloudfront.net (can be deleted)
